@@ -4,14 +4,11 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.couchbase.client.deps.io.netty.channel.ChannelHandler;
-
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
 
 @Component
-@ChannelHandler.Sharable
 public class CustomByteDecoder extends ByteToMessageDecoder {
 
 	@Override
@@ -33,5 +30,4 @@ public class CustomByteDecoder extends ByteToMessageDecoder {
 	    }
 	    return in.readRetainedSlice(4);
 	}
-
 }

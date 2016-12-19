@@ -57,6 +57,7 @@ public class CapturerTcpServer implements GenericFutureListener<Future<Void>> {
 	      .childHandler(this.initializer)
 	      .childOption(ChannelOption.AUTO_READ, Boolean.valueOf(true));
 	    
+	    
 	    this.channel = b.bind(this.port).sync().channel();
 	    this.channel.closeFuture().addListener(this);
 	  }

@@ -1806,3 +1806,363 @@ io.netty.channel.ChannelPipelineException: com.krungsri.intellinx.message.broker
 2559-12-19 16:26:02.642  INFO 6900 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xf33df292, L:/0:0:0:0:0:0:0:0:7750] CLOSE
 2559-12-19 16:26:02.643  INFO 6900 --- [nioEventLoopGroup-2-1] c.k.i.m.b.c.netty.CapturerTcpServer      : Shutting down workgroup of Gateway Http Server (Netty) gracefully
 2559-12-19 16:26:02.654  INFO 6900 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xf33df292, L:/0:0:0:0:0:0:0:0:7750] UNREGISTERED
+2016-12-19 23:22:32.674  INFO 4676 --- [main] c.k.i.m.b.c.IntellinxBrokerApplication   : Starting IntellinxBrokerApplication on JISTSUEM-MSI with PID 4676 (C:\Users\pongpat705\git\broker\target\classes started by pongpat705 in C:\Users\pongpat705\git\broker)
+2016-12-19 23:22:32.696  INFO 4676 --- [main] c.k.i.m.b.c.IntellinxBrokerApplication   : No active profile set, falling back to default profiles: default
+2016-12-19 23:22:32.792  INFO 4676 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7e07db1f: startup date [Mon Dec 19 23:22:32 GMT+07:00 2016]; root of context hierarchy
+2016-12-19 23:22:34.129  INFO 4676 --- [main] c.k.i.m.b.c.netty.CapturerTcpServer      : Starting Gateway Http Server (Netty)
+2016-12-19 23:22:34.597  INFO 4676 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xc62acafc] REGISTERED
+2016-12-19 23:22:34.598  INFO 4676 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xc62acafc] BIND: 0.0.0.0/0.0.0.0:7750
+2016-12-19 23:22:34.599  INFO 4676 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xc62acafc, L:/0:0:0:0:0:0:0:0:7750] ACTIVE
+2016-12-19 23:22:35.395  INFO 4676 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-19 23:22:35.464  INFO 4676 --- [main] c.k.i.m.b.c.IntellinxBrokerApplication   : Started IntellinxBrokerApplication in 5.408 seconds (JVM running for 9.962)
+2016-12-19 23:22:48.620  INFO 4676 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xc62acafc, L:/0:0:0:0:0:0:0:0:7750] RECEIVED: [id: 0xb222f039, L:/127.0.0.1:7750 - R:/127.0.0.1:63675]
+2016-12-19 23:22:53.261  INFO 4676 --- [nioEventLoopGroup-3-1] c.k.i.m.b.capture.netty.CapturerHandler  : 0x7373730D
+2016-12-19 23:22:53.266  INFO 4676 --- [nioEventLoopGroup-3-1] c.k.i.m.b.capture.netty.CapturerHandler  : 0x0A
+2016-12-19 23:22:57.309  INFO 4676 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xc62acafc, L:/0:0:0:0:0:0:0:0:7750] RECEIVED: [id: 0x419ea821, L:/127.0.0.1:7750 - R:/127.0.0.1:63676]
+2016-12-19 23:22:57.329  WARN 4676 --- [nioEventLoopGroup-3-2] io.netty.channel.ChannelInitializer      : Failed to initialize a channel. Closing: [id: 0x419ea821, L:/127.0.0.1:7750 - R:/127.0.0.1:63676]
+
+io.netty.channel.ChannelPipelineException: com.krungsri.intellinx.message.broker.capture.netty.CustomByteDecoder is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:587) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:199) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:392) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:379) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at com.krungsri.intellinx.message.broker.capture.netty.CapturerInitializer.initChannel(CapturerInitializer.java:28) ~[classes/:na]
+	at com.krungsri.intellinx.message.broker.capture.netty.CapturerInitializer.initChannel(CapturerInitializer.java:1) ~[classes/:na]
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:113) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:105) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:597) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.access$000(DefaultChannelPipeline.java:44) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1387) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1122) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:647) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:506) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:419) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:478) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:418) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:440) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_111]
+
+2016-12-19 23:28:07.778  INFO 4676 --- [RMI TCP Connection(2)-192.168.43.39] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2016-12-19 23:28:07.889  INFO 4676 --- [RMI TCP Connection(2)-192.168.43.39] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7e07db1f: startup date [Mon Dec 19 23:22:32 GMT+07:00 2016]; root of context hierarchy
+2016-12-19 23:28:07.923  INFO 4676 --- [RMI TCP Connection(2)-192.168.43.39] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-12-19 23:28:07.929  INFO 4676 --- [RMI TCP Connection(2)-192.168.43.39] c.k.i.m.b.c.netty.CapturerTcpServer      : Shutting down Gateway Http Server (Netty) channel
+2016-12-19 23:28:07.935  INFO 4676 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xc62acafc, L:/0:0:0:0:0:0:0:0:7750] CLOSE
+2016-12-19 23:28:07.935  INFO 4676 --- [nioEventLoopGroup-2-1] c.k.i.m.b.c.netty.CapturerTcpServer      : Shutting down workgroup of Gateway Http Server (Netty) gracefully
+2016-12-19 23:28:07.953  INFO 4676 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xc62acafc, L:/0:0:0:0:0:0:0:0:7750] UNREGISTERED
+2016-12-19 23:28:32.114  INFO 7344 --- [main] c.k.i.m.b.c.IntellinxBrokerApplication   : Starting IntellinxBrokerApplication on JISTSUEM-MSI with PID 7344 (C:\Users\pongpat705\git\broker\target\classes started by pongpat705 in C:\Users\pongpat705\git\broker)
+2016-12-19 23:28:32.165  INFO 7344 --- [main] c.k.i.m.b.c.IntellinxBrokerApplication   : No active profile set, falling back to default profiles: default
+2016-12-19 23:28:32.213  INFO 7344 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6138e79a: startup date [Mon Dec 19 23:28:32 GMT+07:00 2016]; root of context hierarchy
+2016-12-19 23:28:33.001  INFO 7344 --- [main] c.k.i.m.b.c.netty.CapturerTcpServer      : Starting Gateway Http Server (Netty)
+2016-12-19 23:29:29.890  INFO 7344 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0x6d20ead4] REGISTERED
+2016-12-19 23:29:31.489  INFO 7344 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0x6d20ead4] BIND: 0.0.0.0/0.0.0.0:7750
+2016-12-19 23:29:31.517  INFO 7344 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0x6d20ead4, L:/0:0:0:0:0:0:0:0:7750] ACTIVE
+2016-12-19 23:29:31.855  INFO 7344 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-19 23:29:31.876  INFO 7344 --- [main] c.k.i.m.b.c.IntellinxBrokerApplication   : Started IntellinxBrokerApplication in 60.135 seconds (JVM running for 62.706)
+2016-12-19 23:29:39.675  INFO 7344 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0x6d20ead4, L:/0:0:0:0:0:0:0:0:7750] RECEIVED: [id: 0x7f8c77a1, L:/127.0.0.1:7750 - R:/127.0.0.1:63887]
+2016-12-19 23:30:46.413  INFO 7344 --- [nioEventLoopGroup-3-1] c.k.i.m.b.capture.netty.CapturerHandler  : 0x7878780D
+2016-12-19 23:30:46.418  INFO 7344 --- [nioEventLoopGroup-3-1] c.k.i.m.b.capture.netty.CapturerHandler  : 0x0A
+2016-12-19 23:30:49.257  INFO 7344 --- [nioEventLoopGroup-3-1] c.k.i.m.b.capture.netty.CapturerHandler  : 0x6464640D
+2016-12-19 23:30:49.262  INFO 7344 --- [nioEventLoopGroup-3-1] c.k.i.m.b.capture.netty.CapturerHandler  : 0x0A
+2016-12-19 23:30:52.263  INFO 7344 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0x6d20ead4, L:/0:0:0:0:0:0:0:0:7750] RECEIVED: [id: 0xe18fc6eb, L:/127.0.0.1:7750 - R:/127.0.0.1:63888]
+2016-12-19 23:31:39.403  WARN 7344 --- [nioEventLoopGroup-3-2] io.netty.channel.ChannelInitializer      : Failed to initialize a channel. Closing: [id: 0xe18fc6eb, L:/127.0.0.1:7750 - R:/127.0.0.1:63888]
+
+io.netty.channel.ChannelPipelineException: com.krungsri.intellinx.message.broker.capture.netty.CustomByteDecoder is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:587) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:199) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:392) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:379) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at com.krungsri.intellinx.message.broker.capture.netty.CapturerInitializer.initChannel(CapturerInitializer.java:28) ~[classes/:na]
+	at com.krungsri.intellinx.message.broker.capture.netty.CapturerInitializer.initChannel(CapturerInitializer.java:1) ~[classes/:na]
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:113) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:105) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:597) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.access$000(DefaultChannelPipeline.java:44) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1387) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1122) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:647) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:506) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:419) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:478) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:418) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:440) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_111]
+
+2016-12-19 23:32:14.294  INFO 7344 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0x6d20ead4, L:/0:0:0:0:0:0:0:0:7750] RECEIVED: [id: 0x3d907fe4, L:/127.0.0.1:7750 - R:/127.0.0.1:63957]
+2016-12-19 23:33:00.794  WARN 7344 --- [nioEventLoopGroup-3-3] io.netty.channel.ChannelInitializer      : Failed to initialize a channel. Closing: [id: 0x3d907fe4, L:/127.0.0.1:7750 - R:/127.0.0.1:63957]
+
+io.netty.channel.ChannelPipelineException: com.krungsri.intellinx.message.broker.capture.netty.CustomByteDecoder is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:587) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:199) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:392) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:379) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at com.krungsri.intellinx.message.broker.capture.netty.CapturerInitializer.initChannel(CapturerInitializer.java:28) ~[classes/:na]
+	at com.krungsri.intellinx.message.broker.capture.netty.CapturerInitializer.initChannel(CapturerInitializer.java:1) ~[classes/:na]
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:113) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:105) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:597) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.access$000(DefaultChannelPipeline.java:44) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1387) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1122) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:647) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:506) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:419) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:478) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:418) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:440) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_111]
+
+2016-12-19 23:33:05.001  INFO 7344 --- [RMI TCP Connection(2)-192.168.43.39] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2016-12-19 23:33:05.014  INFO 7344 --- [RMI TCP Connection(2)-192.168.43.39] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6138e79a: startup date [Mon Dec 19 23:28:32 GMT+07:00 2016]; root of context hierarchy
+2016-12-19 23:33:05.022  INFO 7344 --- [RMI TCP Connection(2)-192.168.43.39] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-12-19 23:33:05.022  INFO 7344 --- [RMI TCP Connection(2)-192.168.43.39] c.k.i.m.b.c.netty.CapturerTcpServer      : Shutting down Gateway Http Server (Netty) channel
+2016-12-19 23:33:05.029  INFO 7344 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0x6d20ead4, L:/0:0:0:0:0:0:0:0:7750] CLOSE
+2016-12-19 23:33:05.029  INFO 7344 --- [nioEventLoopGroup-2-1] c.k.i.m.b.c.netty.CapturerTcpServer      : Shutting down workgroup of Gateway Http Server (Netty) gracefully
+2016-12-19 23:33:05.052  INFO 7344 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0x6d20ead4, L:/0:0:0:0:0:0:0:0:7750] UNREGISTERED
+2016-12-19 23:34:22.429  INFO 7652 --- [main] c.k.i.m.b.c.IntellinxBrokerApplication   : Starting IntellinxBrokerApplication on JISTSUEM-MSI with PID 7652 (C:\Users\pongpat705\git\broker\target\classes started by pongpat705 in C:\Users\pongpat705\git\broker)
+2016-12-19 23:34:22.432  INFO 7652 --- [main] c.k.i.m.b.c.IntellinxBrokerApplication   : No active profile set, falling back to default profiles: default
+2016-12-19 23:34:22.469  INFO 7652 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@36bc55de: startup date [Mon Dec 19 23:34:22 GMT+07:00 2016]; root of context hierarchy
+2016-12-19 23:34:23.071  WARN 7652 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'capturerInitializer': Unsatisfied dependency expressed through field 'byteDecoder'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customByteDecoder' defined in file [C:\Users\pongpat705\git\broker\target\classes\com\krungsri\intellinx\message\broker\capture\netty\CustomByteDecoder.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.krungsri.intellinx.message.broker.capture.netty.CustomByteDecoder]: Constructor threw exception; nested exception is java.lang.IllegalStateException: @Sharable annotation is not allowed
+2016-12-19 23:34:23.078  INFO 7652 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-12-19 23:34:23.086 ERROR 7652 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'capturerInitializer': Unsatisfied dependency expressed through field 'byteDecoder'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customByteDecoder' defined in file [C:\Users\pongpat705\git\broker\target\classes\com\krungsri\intellinx\message\broker\capture\netty\CustomByteDecoder.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.krungsri.intellinx.message.broker.capture.netty.CustomByteDecoder]: Constructor threw exception; nested exception is java.lang.IllegalStateException: @Sharable annotation is not allowed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at com.krungsri.intellinx.message.broker.capture.IntellinxBrokerApplication.main(IntellinxBrokerApplication.java:10) [classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customByteDecoder' defined in file [C:\Users\pongpat705\git\broker\target\classes\com\krungsri\intellinx\message\broker\capture\netty\CustomByteDecoder.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.krungsri.intellinx.message.broker.capture.netty.CustomByteDecoder]: Constructor threw exception; nested exception is java.lang.IllegalStateException: @Sharable annotation is not allowed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1110) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1054) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	... 18 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.krungsri.intellinx.message.broker.capture.netty.CustomByteDecoder]: Constructor threw exception; nested exception is java.lang.IllegalStateException: @Sharable annotation is not allowed
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:154) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:89) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1102) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	... 29 common frames omitted
+Caused by: java.lang.IllegalStateException: @Sharable annotation is not allowed
+	at io.netty.handler.codec.CodecUtil.ensureNotSharable(CodecUtil.java:27) ~[netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.<init>(ByteToMessageDecoder.java:141) ~[netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at com.krungsri.intellinx.message.broker.capture.netty.CustomByteDecoder.<init>(CustomByteDecoder.java:14) ~[classes/:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_111]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_111]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:142) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	... 31 common frames omitted
+
+2016-12-19 23:43:09.653  INFO 11432 --- [main] c.k.i.m.b.c.IntellinxBrokerApplication   : Starting IntellinxBrokerApplication on JISTSUEM-MSI with PID 11432 (C:\Users\pongpat705\git\broker\target\classes started by pongpat705 in C:\Users\pongpat705\git\broker)
+2016-12-19 23:43:09.657  INFO 11432 --- [main] c.k.i.m.b.c.IntellinxBrokerApplication   : No active profile set, falling back to default profiles: default
+2016-12-19 23:43:09.703  INFO 11432 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@561868a0: startup date [Mon Dec 19 23:43:09 GMT+07:00 2016]; root of context hierarchy
+2016-12-19 23:44:03.380  WARN 11432 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'capturerInitializer': Unsatisfied dependency expressed through field 'byteDecoder'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customByteDecoder' defined in file [C:\Users\pongpat705\git\broker\target\classes\com\krungsri\intellinx\message\broker\capture\netty\CustomByteDecoder.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.krungsri.intellinx.message.broker.capture.netty.CustomByteDecoder]: Constructor threw exception; nested exception is java.lang.IllegalStateException: @Sharable annotation is not allowed
+2016-12-19 23:44:03.401  INFO 11432 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-12-19 23:44:03.413 ERROR 11432 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'capturerInitializer': Unsatisfied dependency expressed through field 'byteDecoder'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customByteDecoder' defined in file [C:\Users\pongpat705\git\broker\target\classes\com\krungsri\intellinx\message\broker\capture\netty\CustomByteDecoder.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.krungsri.intellinx.message.broker.capture.netty.CustomByteDecoder]: Constructor threw exception; nested exception is java.lang.IllegalStateException: @Sharable annotation is not allowed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at com.krungsri.intellinx.message.broker.capture.IntellinxBrokerApplication.main(IntellinxBrokerApplication.java:10) [classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customByteDecoder' defined in file [C:\Users\pongpat705\git\broker\target\classes\com\krungsri\intellinx\message\broker\capture\netty\CustomByteDecoder.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.krungsri.intellinx.message.broker.capture.netty.CustomByteDecoder]: Constructor threw exception; nested exception is java.lang.IllegalStateException: @Sharable annotation is not allowed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1110) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1054) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	... 18 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.krungsri.intellinx.message.broker.capture.netty.CustomByteDecoder]: Constructor threw exception; nested exception is java.lang.IllegalStateException: @Sharable annotation is not allowed
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:154) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:89) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1102) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	... 29 common frames omitted
+Caused by: java.lang.IllegalStateException: @Sharable annotation is not allowed
+	at io.netty.handler.codec.CodecUtil.ensureNotSharable(CodecUtil.java:27) ~[netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.<init>(ByteToMessageDecoder.java:141) ~[netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at com.krungsri.intellinx.message.broker.capture.netty.CustomByteDecoder.<init>(CustomByteDecoder.java:12) ~[classes/:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_111]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_111]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:142) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	... 31 common frames omitted
+
+2016-12-19 23:47:53.093  INFO 2276 --- [main] c.k.i.m.b.c.IntellinxBrokerApplication   : Starting IntellinxBrokerApplication on JISTSUEM-MSI with PID 2276 (C:\Users\pongpat705\git\broker\target\classes started by pongpat705 in C:\Users\pongpat705\git\broker)
+2016-12-19 23:47:53.095  INFO 2276 --- [main] c.k.i.m.b.c.IntellinxBrokerApplication   : No active profile set, falling back to default profiles: default
+2016-12-19 23:47:53.131  INFO 2276 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@36bc55de: startup date [Mon Dec 19 23:47:53 GMT+07:00 2016]; root of context hierarchy
+2016-12-19 23:47:53.734  INFO 2276 --- [main] c.k.i.m.b.c.netty.CapturerTcpServer      : Starting Gateway Http Server (Netty)
+2016-12-19 23:47:54.010  INFO 2276 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xb81c4e94] REGISTERED
+2016-12-19 23:47:54.015  INFO 2276 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xb81c4e94] BIND: 0.0.0.0/0.0.0.0:7750
+2016-12-19 23:47:54.017  INFO 2276 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xb81c4e94, L:/0:0:0:0:0:0:0:0:7750] ACTIVE
+2016-12-19 23:47:54.219  INFO 2276 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-19 23:47:54.238  INFO 2276 --- [main] c.k.i.m.b.c.IntellinxBrokerApplication   : Started IntellinxBrokerApplication in 1.448 seconds (JVM running for 1.837)
+2016-12-19 23:47:59.437  INFO 2276 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xb81c4e94, L:/0:0:0:0:0:0:0:0:7750] RECEIVED: [id: 0x61c0202f, L:/127.0.0.1:7750 - R:/127.0.0.1:64688]
+2016-12-19 23:48:01.045  INFO 2276 --- [nioEventLoopGroup-3-1] c.k.i.m.b.capture.netty.CapturerHandler  : 0x73737373
+2016-12-19 23:48:01.050  INFO 2276 --- [nioEventLoopGroup-3-1] c.k.i.m.b.capture.netty.CapturerHandler  : 0x0D0A
+2016-12-19 23:48:02.540  INFO 2276 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xb81c4e94, L:/0:0:0:0:0:0:0:0:7750] RECEIVED: [id: 0xd3f922e7, L:/127.0.0.1:7750 - R:/127.0.0.1:64689]
+2016-12-19 23:48:04.774  INFO 2276 --- [nioEventLoopGroup-3-2] c.k.i.m.b.capture.netty.CapturerHandler  : 0x73737373
+2016-12-19 23:48:04.779  INFO 2276 --- [nioEventLoopGroup-3-2] c.k.i.m.b.capture.netty.CapturerHandler  : 0x0D0A
+2016-12-19 23:48:07.706  INFO 2276 --- [nioEventLoopGroup-3-2] c.k.i.m.b.capture.netty.CapturerHandler  : 0x6161610D
+2016-12-19 23:48:07.713  INFO 2276 --- [nioEventLoopGroup-3-2] c.k.i.m.b.capture.netty.CapturerHandler  : 0x0A
+2016-12-19 23:48:12.928  WARN 2276 --- [nioEventLoopGroup-3-2] io.netty.channel.DefaultChannelPipeline  : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_111]
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source) ~[na:1.8.0_111]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source) ~[na:1.8.0_111]
+	at sun.nio.ch.IOUtil.read(Unknown Source) ~[na:1.8.0_111]
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source) ~[na:1.8.0_111]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1100) ~[netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:367) ~[netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:118) ~[netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:610) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:551) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:465) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:437) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_111]
+
+2016-12-19 23:48:30.881  INFO 2276 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xb81c4e94, L:/0:0:0:0:0:0:0:0:7750] RECEIVED: [id: 0x427bfb58, L:/127.0.0.1:7750 - R:/127.0.0.1:64690]
+2016-12-19 23:48:32.791  INFO 2276 --- [nioEventLoopGroup-3-3] c.k.i.m.b.capture.netty.CapturerHandler  : 0x7373730D
+2016-12-19 23:48:32.796  INFO 2276 --- [nioEventLoopGroup-3-3] c.k.i.m.b.capture.netty.CapturerHandler  : 0x0A
+2016-12-19 23:48:34.165  INFO 2276 --- [nioEventLoopGroup-3-3] c.k.i.m.b.capture.netty.CapturerHandler  : 0x6161610D
+2016-12-19 23:48:34.171  INFO 2276 --- [nioEventLoopGroup-3-3] c.k.i.m.b.capture.netty.CapturerHandler  : 0x0A
+2016-12-19 23:48:38.109  INFO 2276 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xb81c4e94, L:/0:0:0:0:0:0:0:0:7750] RECEIVED: [id: 0x52cc8285, L:/127.0.0.1:7750 - R:/127.0.0.1:64691]
+2016-12-19 23:48:39.880  INFO 2276 --- [nioEventLoopGroup-3-4] c.k.i.m.b.capture.netty.CapturerHandler  : 0x61616161
+2016-12-19 23:48:39.884  INFO 2276 --- [nioEventLoopGroup-3-4] c.k.i.m.b.capture.netty.CapturerHandler  : 0x0D0A
+2016-12-19 23:48:42.184  WARN 2276 --- [nioEventLoopGroup-3-4] io.netty.channel.DefaultChannelPipeline  : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_111]
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source) ~[na:1.8.0_111]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source) ~[na:1.8.0_111]
+	at sun.nio.ch.IOUtil.read(Unknown Source) ~[na:1.8.0_111]
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source) ~[na:1.8.0_111]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1100) ~[netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:367) ~[netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:118) ~[netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:610) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:551) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:465) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:437) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_111]
+
+2016-12-19 23:49:38.561  INFO 2276 --- [RMI TCP Connection(2)-192.168.43.39] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2016-12-19 23:49:38.562  INFO 2276 --- [RMI TCP Connection(2)-192.168.43.39] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@36bc55de: startup date [Mon Dec 19 23:47:53 GMT+07:00 2016]; root of context hierarchy
+2016-12-19 23:49:38.568  INFO 2276 --- [RMI TCP Connection(2)-192.168.43.39] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-12-19 23:49:38.572  INFO 2276 --- [RMI TCP Connection(2)-192.168.43.39] c.k.i.m.b.c.netty.CapturerTcpServer      : Shutting down Gateway Http Server (Netty) channel
+2016-12-19 23:49:38.573  INFO 2276 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xb81c4e94, L:/0:0:0:0:0:0:0:0:7750] CLOSE
+2016-12-19 23:49:38.577  INFO 2276 --- [nioEventLoopGroup-2-1] c.k.i.m.b.c.netty.CapturerTcpServer      : Shutting down workgroup of Gateway Http Server (Netty) gracefully
+2016-12-19 23:49:38.594  INFO 2276 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xb81c4e94, L:/0:0:0:0:0:0:0:0:7750] UNREGISTERED
+2016-12-19 23:49:52.736  INFO 7276 --- [main] c.k.i.m.b.c.IntellinxBrokerApplication   : Starting IntellinxBrokerApplication on JISTSUEM-MSI with PID 7276 (C:\Users\pongpat705\git\broker\target\classes started by pongpat705 in C:\Users\pongpat705\git\broker)
+2016-12-19 23:49:52.738  INFO 7276 --- [main] c.k.i.m.b.c.IntellinxBrokerApplication   : No active profile set, falling back to default profiles: default
+2016-12-19 23:49:52.777  INFO 7276 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@36bc55de: startup date [Mon Dec 19 23:49:52 GMT+07:00 2016]; root of context hierarchy
+2016-12-19 23:49:53.355  INFO 7276 --- [main] c.k.i.m.b.c.netty.CapturerTcpServer      : Starting Gateway Http Server (Netty)
+2016-12-19 23:49:53.660  INFO 7276 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xdfd347d2] REGISTERED
+2016-12-19 23:49:53.666  INFO 7276 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xdfd347d2] BIND: 0.0.0.0/0.0.0.0:7750
+2016-12-19 23:49:53.667  INFO 7276 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xdfd347d2, L:/0:0:0:0:0:0:0:0:7750] ACTIVE
+2016-12-19 23:49:53.914  INFO 7276 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-19 23:49:53.929  INFO 7276 --- [main] c.k.i.m.b.c.IntellinxBrokerApplication   : Started IntellinxBrokerApplication in 1.497 seconds (JVM running for 1.894)
+2016-12-19 23:50:07.574  INFO 7276 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xdfd347d2, L:/0:0:0:0:0:0:0:0:7750] RECEIVED: [id: 0x9a178456, L:/127.0.0.1:7750 - R:/127.0.0.1:64890]
+2016-12-19 23:50:10.605  INFO 7276 --- [nioEventLoopGroup-3-1] c.k.i.m.b.capture.netty.CapturerHandler  : 0x61736173
+2016-12-19 23:50:10.609  INFO 7276 --- [nioEventLoopGroup-3-1] c.k.i.m.b.capture.netty.CapturerHandler  : 0x610D0A
+2016-12-19 23:50:11.688  INFO 7276 --- [nioEventLoopGroup-3-1] c.k.i.m.b.capture.netty.CapturerHandler  : 0x6161610D
+2016-12-19 23:50:11.693  INFO 7276 --- [nioEventLoopGroup-3-1] c.k.i.m.b.capture.netty.CapturerHandler  : 0x0A
+2016-12-19 23:50:15.551  INFO 7276 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xdfd347d2, L:/0:0:0:0:0:0:0:0:7750] RECEIVED: [id: 0x37a083cd, L:/127.0.0.1:7750 - R:/127.0.0.1:64892]
+2016-12-19 23:50:17.161  INFO 7276 --- [nioEventLoopGroup-3-2] c.k.i.m.b.capture.netty.CapturerHandler  : 0x73617361
+2016-12-19 23:50:17.166  INFO 7276 --- [nioEventLoopGroup-3-2] c.k.i.m.b.capture.netty.CapturerHandler  : 0x730D0A
+2016-12-19 23:50:18.850  INFO 7276 --- [nioEventLoopGroup-3-2] c.k.i.m.b.capture.netty.CapturerHandler  : 0x6161610D
+2016-12-19 23:50:18.855  INFO 7276 --- [nioEventLoopGroup-3-2] c.k.i.m.b.capture.netty.CapturerHandler  : 0x0A
+2016-12-19 23:50:24.918  INFO 7276 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xdfd347d2, L:/0:0:0:0:0:0:0:0:7750] RECEIVED: [id: 0xefb14974, L:/127.0.0.1:7750 - R:/127.0.0.1:64893]
+2016-12-19 23:50:27.122  INFO 7276 --- [nioEventLoopGroup-3-3] c.k.i.m.b.capture.netty.CapturerHandler  : 0x61616161
+2016-12-19 23:50:27.126  INFO 7276 --- [nioEventLoopGroup-3-3] c.k.i.m.b.capture.netty.CapturerHandler  : 0x0D0A
+2016-12-19 23:50:28.664  WARN 7276 --- [nioEventLoopGroup-3-3] io.netty.channel.DefaultChannelPipeline  : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_111]
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source) ~[na:1.8.0_111]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source) ~[na:1.8.0_111]
+	at sun.nio.ch.IOUtil.read(Unknown Source) ~[na:1.8.0_111]
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source) ~[na:1.8.0_111]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1100) ~[netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:367) ~[netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:118) ~[netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:610) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:551) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:465) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:437) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144) [netty-all-4.1.5.Final.jar:4.1.5.Final]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_111]
+
+2016-12-19 23:50:30.725  INFO 7276 --- [RMI TCP Connection(2)-192.168.43.39] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2016-12-19 23:50:30.729  INFO 7276 --- [RMI TCP Connection(2)-192.168.43.39] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@36bc55de: startup date [Mon Dec 19 23:49:52 GMT+07:00 2016]; root of context hierarchy
+2016-12-19 23:50:30.733  INFO 7276 --- [RMI TCP Connection(2)-192.168.43.39] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-12-19 23:50:30.738  INFO 7276 --- [RMI TCP Connection(2)-192.168.43.39] c.k.i.m.b.c.netty.CapturerTcpServer      : Shutting down Gateway Http Server (Netty) channel
+2016-12-19 23:50:30.738  INFO 7276 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xdfd347d2, L:/0:0:0:0:0:0:0:0:7750] CLOSE
+2016-12-19 23:50:30.742  INFO 7276 --- [nioEventLoopGroup-2-1] c.k.i.m.b.c.netty.CapturerTcpServer      : Shutting down workgroup of Gateway Http Server (Netty) gracefully
+2016-12-19 23:50:30.756  INFO 7276 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xdfd347d2, L:/0:0:0:0:0:0:0:0:7750] UNREGISTERED
