@@ -22,7 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<start-class>com.krungsri.intellinx.message.broker.capture.IntellinxApplication</start-class>
+		<start-class>com.krungsri.intellinx.message.broker.capture.IntellinxBrokerApplication</start-class>
 		<netty.version>4.1.5.Final</netty.version>
 	</properties>
 
@@ -46,11 +46,6 @@
 		<dependency>
 		    <groupId>commons-codec</groupId>
 		    <artifactId>commons-codec</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-couchbase</artifactId>
 		</dependency>
 	</dependencies>
 

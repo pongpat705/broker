@@ -2166,3 +2166,15 @@ java.io.IOException: An existing connection was forcibly closed by the remote ho
 2016-12-19 23:50:30.738  INFO 7276 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xdfd347d2, L:/0:0:0:0:0:0:0:0:7750] CLOSE
 2016-12-19 23:50:30.742  INFO 7276 --- [nioEventLoopGroup-2-1] c.k.i.m.b.c.netty.CapturerTcpServer      : Shutting down workgroup of Gateway Http Server (Netty) gracefully
 2016-12-19 23:50:30.756  INFO 7276 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0xdfd347d2, L:/0:0:0:0:0:0:0:0:7750] UNREGISTERED
+2016-12-20 00:00:42.560  INFO 6200 --- [main] .i.m.b.c.IntellinxBrokerApplicationTests : Starting IntellinxBrokerApplicationTests on JISTSUEM-MSI with PID 6200 (started by pongpat705 in C:\Users\pongpat705\git\broker)
+2016-12-20 00:00:42.561  INFO 6200 --- [main] .i.m.b.c.IntellinxBrokerApplicationTests : No active profile set, falling back to default profiles: default
+2016-12-20 00:00:42.579  INFO 6200 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4c60d6e9: startup date [Tue Dec 20 00:00:42 GMT+07:00 2016]; root of context hierarchy
+2016-12-20 00:00:43.256  INFO 6200 --- [main] c.k.i.m.b.c.netty.CapturerTcpServer      : Starting Gateway Http Server (Netty)
+2016-12-20 00:00:43.671  INFO 6200 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0x644ccd14] REGISTERED
+2016-12-20 00:00:43.673  INFO 6200 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0x644ccd14] BIND: 0.0.0.0/0.0.0.0:7750
+2016-12-20 00:00:43.676  INFO 6200 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0x644ccd14, L:/0:0:0:0:0:0:0:0:7750] ACTIVE
+2016-12-20 00:00:43.976  INFO 6200 --- [main] .i.m.b.c.IntellinxBrokerApplicationTests : Started IntellinxBrokerApplicationTests in 1.841 seconds (JVM running for 2.816)
+2016-12-20 00:00:44.203  INFO 6200 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@4c60d6e9: startup date [Tue Dec 20 00:00:42 GMT+07:00 2016]; root of context hierarchy
+2016-12-20 00:00:44.204  INFO 6200 --- [Thread-1] c.k.i.m.b.c.netty.CapturerTcpServer      : Shutting down Gateway Http Server (Netty) channel
+2016-12-20 00:00:44.205  INFO 6200 --- [nioEventLoopGroup-2-1] io.netty.handler.logging.LoggingHandler  : [id: 0x644ccd14, L:/0:0:0:0:0:0:0:0:7750] CLOSE
+2016-12-20 00:00:44.206  INFO 6200 --- [nioEventLoopGroup-2-1] c.k.i.m.b.c.netty.CapturerTcpServer      : Shutting down workgroup of Gateway Http Server (Netty) gracefully
